@@ -2,28 +2,27 @@ name: Netlify
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  repository_dispatch:
-  workflow_dispatch:
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
-          node-version: '15.x'
-
+          node-version: '12.x'
       - run: npm ci
       - run: npm run build
-        env:
-          ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-          SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-      - run: npx netlify-cli deploy --prod
+        # ここで必要であればビルドに必要な環境変数を渡す
+        # env:
+        #   SOMETHING: foo
+        #   SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      - uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-      - run: echo y
+        with:
+          args: deploy --dir=public --prod
+          secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
