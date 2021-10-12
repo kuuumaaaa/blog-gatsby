@@ -1,0 +1,29 @@
+name: Netlify
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  repository_dispatch:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '15.x'
+
+      - run: npm ci
+      - run: npm run build
+        env:
+          ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+          SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+      - run: npx netlify-cli deploy --prod
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      - run: echo y
