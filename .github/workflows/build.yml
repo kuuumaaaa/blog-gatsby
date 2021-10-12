@@ -9,12 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: '12.x'
       - run: npm ci
-      - run: gatsby build
+      - run: npm run build
         # ここで必要であればビルドに必要な環境変数を渡す
         # env:
         #   SOMETHING: foo
