@@ -4,11 +4,13 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Image from "../components/image"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  const {title, description, hero, date } = data.frontmatter //追加
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -23,7 +25,11 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <p>{date}</p>
+          {hero ?
+            <Image filename={hero} />
+          : <Image filename="dummy.png" />
+          }
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
