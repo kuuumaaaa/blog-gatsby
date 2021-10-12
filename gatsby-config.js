@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Kuma Blog`,
+    title: `日々の積み重ねで圧倒的成長`,
     author: {
-      name: `Takuma Waki`,
+      name: `Kuma`,
       summary: `who lives and works in Tokyo.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `駆け出しエンジニアの学習日記`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     // social: {
     //   twitter: `kylemathews`,
