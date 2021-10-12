@@ -73,10 +73,3 @@ $ aws ec2 describe-instances
 ただ、この方法を用いた場合powershellでnpmをアップデートすると、ubuntu側とバージョンが異なるため注意が必要。
 
 
-
-
-
-
-
-
-
