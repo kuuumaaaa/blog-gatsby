@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `日々の積み重ねで圧倒的成長`,
+    title: `私とPCともろもろと`,
     author: {
       name: `Kuma`,
-      summary: `who lives and works in Tokyo.`,
+      summary: `魚捌きにはまってます。`,
     },
     description: `駆け出しエンジニアの学習日記`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://kumachaaan.com/`,
     // social: {
     //   twitter: `kylemathews`,
     // },
@@ -18,6 +18,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
@@ -112,15 +119,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `私とPCともろもろと`,
+        short_name: `kumablog`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `content/assets/dummy.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,

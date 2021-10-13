@@ -4,13 +4,15 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Image from "../components/image"
+// import Image from "../components/image"
+import Profile from "../components/profile"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
-  const {title, description, hero, date } = data.frontmatter //追加
+  // const {title, description, hero, date } = data.frontmatter //追加
+  // const {title, description, date } = data.frontmatter //追加
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -25,11 +27,8 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{date}</p>
-          {hero ?
-            <Image filename={hero} />
-          : <Image filename="dummy.png" />
-          }
+          <p>{post.frontmatter.date}</p>
+
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -38,6 +37,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <hr />
         <footer>
           <Bio />
+          <Profile />
         </footer>
       </article>
       <nav className="blog-post-nav">
@@ -89,7 +89,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY.MM.DD")
         description
       }
     }
