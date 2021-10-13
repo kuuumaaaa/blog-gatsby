@@ -6,3 +6,5 @@ hero: aws_console.jpg
 description: "Ayakatti"
 ---
 
+# ケジャンじゃん
+'youtube:https://www.youtube.com/embed/VRPHbYJspHQ'
