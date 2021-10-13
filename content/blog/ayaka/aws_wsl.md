@@ -7,4 +7,4 @@ description: "Ayakatti"
 ---
 
 # ケジャンじゃん
-'youtube:https://www.youtube.com/embed/VRPHbYJspHQ'
+`youtube:https://www.youtube.com/embed/VRPHbYJspHQ`
