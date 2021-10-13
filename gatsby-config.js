@@ -6,7 +6,7 @@ module.exports = {
       summary: `魚捌きにはまってます。`,
     },
     description: `駆け出しエンジニアの学習日記`,
-    siteUrl: `https://kumachaaan.com/`,
+    siteUrl: `https://kumachaaan.com`,
     // social: {
     //   twitter: `kylemathews`,
     // },
