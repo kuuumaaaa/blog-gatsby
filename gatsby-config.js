@@ -62,8 +62,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-            // `secrets.GOOGLE_ANALYTICS_ID`,
-            `G-V223QKHLV8`,
+            `secrets.GOOGLE_ANALYTICS_ID`,
+            // `G-V223QKHLV8`,
            ],
         pluginConfig: {
           head: true,
