@@ -63,7 +63,6 @@ module.exports = {
       options: {
         trackingIds: [
             `secrets.GOOGLE_ANALYTICS_ID`,
-            // `G-V223QKHLV8`,
            ],
         pluginConfig: {
           head: true,
@@ -138,6 +137,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
@@ -154,6 +154,12 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.kumachaaan.com`,
+      },
     },
   ],
 }
