@@ -59,6 +59,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      <Link to ="/about">About Me</Link>
     </Layout>
   )
 }

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-// import "@fontsource/open-sans" // Defaults to weight 400.
+import "@fontsource/open-sans" // Defaults to weight 400.
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -23,6 +23,20 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
+      <nav>
+          <ul className="navLinks">
+            <li className="navLinkItem">
+              <Link to="/"  className="navLinkText">
+                Home
+              </Link>
+            </li>
+            <li className="navLinkItem">
+              <Link to="/about" className="navLinkText">
+                About
+              </Link>
+            </li>
+          </ul>
+      </nav>
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>

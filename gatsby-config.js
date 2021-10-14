@@ -58,18 +58,17 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-            `${process.env.GOOGLE_ANALYTICS_ID}`,
-            // `secrets.GOOGLE_ANALYTICS_ID`,
-           ],
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: [
+    //         `${GOOGLE_ANALYTICS_ID}`,
+    //        ],
+    //     pluginConfig: {
+    //       head: true,
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -168,6 +167,15 @@ module.exports = {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: `https://www.kumachaaan.com`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `DotGothic16`,
+        ],
+        display: 'swap',
       },
     },
   ],
