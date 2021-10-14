@@ -1,7 +1,7 @@
 ---
 title: AWS_WSL
 date: "2021-10-11"
-pagetype: aws
+pagetype: ['aws','aykatti']
 hero: aws_console.jpg
 description: "AWS_WSL"
 ---

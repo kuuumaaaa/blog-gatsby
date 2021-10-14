@@ -33,6 +33,7 @@ const BlogIndex = ({ data, location }) => {
 
           return (
             <li key={post.fields.slug}>
+            <hr />
               <article
                 className="post-list-item"
                 itemScope
@@ -54,12 +55,20 @@ const BlogIndex = ({ data, location }) => {
                     itemProp="description"
                   />
                 </section>
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: post.frontmatter.pagetype || post.excerpt,
+                    }}
+                    itemProp="pagetype"
+                  />
+                </section>
               </article>
+              <hr />
             </li>
           )
         })}
       </ol>
-      <Link to ="/about">About Me</Link>
     </Layout>
   )
 }
@@ -82,6 +91,7 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "YYYY.MM.DD")
           title
+          pagetype
           description
         }
       }
