@@ -260,8 +260,14 @@ a:focus {
 }
 
 .post-list-item {
-  margin-bottom: var(--spacing-8);
+  /* margin-bottom: var(--spacing-8);
   margin-top: var(--spacing-8);
+  border:  1px #ff0000 solid; */
+  padding: 0.2em 0.5em;
+  margin: 2em 0;
+  background: #d6ebff;
+  box-shadow: 0px 0px 0px 10px #d6ebff;
+  border: dashed 2px white;
 }
 
 .post-list-item p {
@@ -322,6 +328,7 @@ a:focus {
 .navLinkText {
   color: 'black';
 }
+
 
 /* Media queries */
 

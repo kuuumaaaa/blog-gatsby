@@ -30,10 +30,8 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-
           return (
             <li key={post.fields.slug}>
-            <hr />
               <article
                 className="post-list-item"
                 itemScope
@@ -64,7 +62,6 @@ const BlogIndex = ({ data, location }) => {
                   />
                 </section>
               </article>
-              <hr />
             </li>
           )
         })}
