@@ -13,12 +13,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12.x'
-            echo ENV_NAME=\"\">>.env.production
-            echo GOOGLE_ANALYTICS_ID=\"${{secrets.GOOGLE_ANALYTICS_ID}}\">>.env.production
       - run: npm ci
       - run: npm run build
         env:
-          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+          GOOGLE_ANALYTICS_ID: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       - uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
