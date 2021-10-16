@@ -32,6 +32,7 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug
           return (
             <li key={post.fields.slug}>
+              <Link className="post-link" to={post.fields.slug} itemProp="url">
               <article
                 className="post-list-item"
                 itemScope
@@ -39,9 +40,7 @@ const BlogIndex = ({ data, location }) => {
               >
                 <header>
                   <h2>
-                    <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
-                    </Link>
                   </h2>
                   <small>{post.frontmatter.date}</small>
                 </header>
@@ -62,6 +61,7 @@ const BlogIndex = ({ data, location }) => {
                   />
                 </section>
               </article>
+              </Link>
             </li>
           )
         })}

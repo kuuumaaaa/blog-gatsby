@@ -55,11 +55,12 @@
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
   --color-primary: #005b99;
-  --color-text: #2e353f;
+  --color-text: #716040;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
+  --color-heading: #020826;
+  --color-heading-black: #020826;
   --color-accent: #d1dce5;
+  --color-background: #f9f4ef;
 }
 
 /* HTML elements */
@@ -81,6 +82,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background: var(--color-background);
 }
 
 footer {
@@ -118,7 +120,7 @@ h6 {
 }
 
 h1 {
-  font-weight: var(--fontWeight-black);
+  /* font-weight: var(--fontWeight-bold); */
   font-size: var(--fontSize-6);
   color: var(--color-heading-black);
 }
@@ -316,6 +318,7 @@ a:focus {
   font-size: var(--fontSize-2);
   font-family: var(--font-heading);
 }
+ 
 
 .blog-post-nav ul {
   margin: var(--spacing-0);
@@ -329,7 +332,12 @@ a:focus {
   color: 'black';
 }
 
-
+.post-link {
+  text-decoration: none;
+}
+.post-link:hover { /*擬似クラス*/
+  text-decoration: underline;
+}
 /* Media queries */
 
 @media (max-width: 42rem) {

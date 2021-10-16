@@ -58,17 +58,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-gtag`,
-    //   options: {
-    //     trackingIds: [
-    //         `${GOOGLE_ANALYTICS_ID}`,
-    //        ],
-    //     pluginConfig: {
-    //       head: true,
-    //     },
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+            // `${GOOGLE_ANALYTICS_ID}`,
+            `G-V223QKHLV8`,
+           ],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -178,5 +179,6 @@ module.exports = {
         display: 'swap',
       },
     },
+    `gatsby-plugin-postcss`,
   ],
 }
