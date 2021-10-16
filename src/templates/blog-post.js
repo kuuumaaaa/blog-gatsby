@@ -42,7 +42,7 @@ const BlogPostTemplate = ({ data, location }) => {
 
         </header>
         {/* ここからブログ本文 */}
-        <section
+        <section class="markdown"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
