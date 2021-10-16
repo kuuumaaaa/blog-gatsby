@@ -26,14 +26,27 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
+          {/* title */}
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          {/* upload date */}
           <p>{post.frontmatter.date}</p>
+          {/*tag*/}
+          <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: post.frontmatter.pagetype || post.excerpt,
+                    }}
+                    itemProp="pagetype"
+                  />
+          </section>
 
         </header>
+        {/* ここからブログ本文 */}
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
+        {/* ここまで */}
         <hr />
         <footer>
           <Bio />
@@ -90,6 +103,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "YYYY.MM.DD")
+        pagetype
         description
       }
     }
