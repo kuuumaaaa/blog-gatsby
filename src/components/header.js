@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const Header = ({ title, prop }) => {
+const Header = ({ title }) => {
   return (
     //  <nav>
     //    <div class = "flex">

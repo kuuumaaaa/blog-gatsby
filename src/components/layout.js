@@ -1,6 +1,6 @@
 import * as React from "react"
 // import { Link } from "gatsby"
-import Header from "./Header"
+import Header from "./header"
 import Footer from "./footer"
 import '../global.css'
 
