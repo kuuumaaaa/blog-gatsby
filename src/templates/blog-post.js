@@ -27,7 +27,7 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           {/* title */}
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <h1 itemProp="headline" class="text-4xl py-6 font-semibold text-gray-800">{post.frontmatter.title}</h1>
           {/* upload date */}
           <p>{post.frontmatter.date}</p>
           {/*tag*/}
