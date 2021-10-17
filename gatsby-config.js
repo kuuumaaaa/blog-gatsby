@@ -38,6 +38,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -50,6 +51,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          `gatsby-remark-prismjs-title`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
@@ -63,7 +65,6 @@ module.exports = {
       options: {
         trackingIds: [
             // `${GOOGLE_ANALYTICS_ID}`,
-            `G-V223QKHLV8`,
            ],
         pluginConfig: {
           head: true,
