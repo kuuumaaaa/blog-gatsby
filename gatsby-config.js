@@ -51,6 +51,14 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          {
+            resolve: 'gatsby-remark-code-buttons',
+            options: {
+              tooltipText: `Copy to clipboard`,
+              toasterText: "Copied to clipboard",
+              toasterDuration: 5000,
+            },
+          },
           `gatsby-remark-prismjs-title`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
@@ -151,20 +159,20 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-embed-youtube",
-            options: {
-              width: 800,
-              height: 400
-            }
-          }
-        ]
-      }
-    },
+    // {
+    //   resolve: "gatsby-transformer-remark",
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: "gatsby-remark-embed-youtube",
+    //         options: {
+    //           width: 800,
+    //           height: 400
+    //         }
+    //       }
+    //     ]
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {

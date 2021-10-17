@@ -92,12 +92,54 @@
 
 /* Code */
 .markdown :not(pre) > code {
-@apply bg-indigo-50 p-1 font-semibold text-gray-600 rounded-lg ;
+@apply bg-indigo-50 p-1  rounded-lg ;
 }
 
 /* Pre ```ではさんだもの */
 .markdown pre {
-@apply py-4 px-4 mt-1 text-white rounded-md;
-background: #000044;
+@apply rounded-b-lg;
+/* @apply py-4 px-4 mt-1 text-white rounded-md; */
 }
 
+
+/*------------------ Code Block -------------------------*/
+.gatsby-code-button-container {
+  touch-action: none;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 28px;
+  right: 3px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.gatsby-code-button-icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  fill: gray;
+}
+
+/* code-title */
+  .gatsby-code-title {
+    display: block;
+    position: relative;
+    background: #272822;
+    width: 100%;
+    top: 10px;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+  }
+  
+  .gatsby-code-title span {
+    display: inline;
+    position: relative;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    color: #eee;
+    background: #777;
+    border-top-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    padding: 3px;
+    top: 0.5px;
+  }

@@ -35,19 +35,18 @@ gatsby : 3.14.1
 ### Tailwind CSSのインストール
 基本的に公式の導入方法と同じ
 https://tailwindcss.com/docs/guides/gatsby
-```
+```shell:title=shell
 npm install -D gatsby-plugin-postcss tailwindcss@latest postcss@latest autoprefixer@latest
 ```
 
 ### Tailwind.config.jsファイルの作成
-```
+```shell:title=shell
 npx tailwindcss init -p
 ```
 このコマンド実行後、root直下にtailwind.config.jsが作成されていることを確認。
 また`postcss.config.js`をtailwind.confg.jsと同じ階層に作成する。
 `postcss.config.js`には下記の内容を記載する。
-```
-// postcss.config.js
+```javascript:title=postcss.config.js
 module.exports = {
   plugins: {
     tailwindcss: {},
@@ -58,8 +57,7 @@ module.exports = {
 
 ### Tailwind.config.js内のpurgeを変更
 build時にTailwind CSSのために割く容量が大きくなってしまうため、どこのファイルにTailwind CSSを適用するか指定する。(defaultは作業ディレクトリ全て)
-```
-// tailwind.config.js
+```javascript:title=tailwind.config.js
   module.exports = {
    purge: ['./src/**/*.{js,jsx,ts,tsx}'], //変更箇所
     darkMode: false, // or 'media' or 'class'
@@ -75,7 +73,7 @@ build時にTailwind CSSのために割く容量が大きくなってしまうた
 
 ### gatsby-config.jsへ反映
 gatsbyはpluginを導入する際には、gatsby-config.jsへ記載が必要であるため追記。
-```
+```javascript:title=gatsby-config.js
   module.exports = {
    plugins: ['gatsby-plugin-postcss'],
   }
@@ -86,8 +84,7 @@ Tailwild CSSを使えるようにCSSファイルを作成しimportする。
 ここで詰まった。
 
 公式では以下のように記載するように書かれている。
-```
-/* ./src/styles/global.css */
+```css:title=/src/styles/global.css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,7 +93,7 @@ Tailwild CSSを使えるようにCSSファイルを作成しimportする。
 私の環境では、この記載方法だと参照されなかった。
 動いたのは下記の記載方法
 
-```
+```css:title=/src/styles/global.css
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -105,7 +102,7 @@ Tailwild CSSを使えるようにCSSファイルを作成しimportする。
 また、下記の記載方法でないと動かない方もいるみたい。
 https://qiita.com/masakinihirota/items/bd8c07aa54efad307588
 
-```
+```css:title=/src/styles/global.css
 /* Windows10の場合？ */
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
@@ -115,14 +112,13 @@ https://qiita.com/masakinihirota/items/bd8c07aa54efad307588
 ### 全体へのスタイルの適用
 `gatsby-browser.js`へ先ほど記載したCSSファイルをimportする。
 
-```
-// ./gatsby-browser.js
+```javascript:title=gatsby-browser.js
  import './src/styles/global.css';
 ```
 ### テスト
 /src/pages/配下に`test.js`などテキトーにファイルを作り、ファイルへ下記の内容を記載
 
-```
+```javascript:title=test.js
 import React from "react"
 
 const Test = () => {
@@ -136,7 +132,7 @@ export default Test
 ```
 `gatsby develop`し、localhost:8000/testへ移動し、下記のように赤字になっていれば成功。
 
-![イメージ図](./aws_console.jpg)
+![イメージ図](./2021-10-16-16-34-47.png)
 
 ## 最後に
 Tailwind CSSの導入がすんなり行かなかったため、覚え書きとして手順を書きました。
