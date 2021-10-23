@@ -1,23 +1,18 @@
 ---
-title: Ayakatti
-date: "2021-10-12"
-tags: ["aws"]
+title: Gatsbyを使ったブログ作成
+date: "2021-10-23"
+tags: ["gatsby"]
 hero: ./undraw_Polaroid_re_481f.svg
-description: "Ayakatti"
+description: "create blog by gatsby"
 ---
 
-# ケジャンじゃん
-`youtube:https://www.youtube.com/embed/VRPHbYJspHQ`
-
-
-[[info]]
-| ここに情報文を書く
-
-[[warn]]
-| ここから先のコンテンツは<strong>まったり</strong>要素が含まれています。
-| ご注意ください！
-
-
-[[question|question_test]]
-|hoge hoge
-|hoooooooooooo
+## はじめに
+Reactのフレームワークの一つであるGatsbyを使って、ブログを作成してみました。
+フロントエンド周りなど色々勉強になったのでブログのデプロイ方法など紹介したいと思います。
+## gatsby
+## starter
+gatsbyは様々なstarterを出しているので、そのstarterをちょっといじるだけでちょっとしたものだったらすぐできます。
+色々カスタマイズしたかったのと、始めた当初こんなに色々starterがあるのを知らなかったので
+## plugin
+## CSS
+## デプロイ方法

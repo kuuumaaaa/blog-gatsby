@@ -1,10 +1,7 @@
 import * as React from "react"
-// import { Link } from "gatsby"
 import Header from "./header"
 import Footer from "./footer"
 import '../global.css'
-// import Sidebar from "./Sidebar"
-import Profile from "./profile"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
