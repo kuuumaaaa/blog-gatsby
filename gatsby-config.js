@@ -59,10 +59,19 @@ module.exports = {
               toasterDuration: 5000,
             },
           },
-          `gatsby-remark-prismjs-title`,
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+            offsetY: `30`,
+            icon: false,
+            className: `remark-autolink-headers`,
+            maintainCase: false,
+            },
+        },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-prismjs-title`,
+          `gatsby-remark-prismjs`,
         ],
       },
     },
@@ -72,7 +81,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-            // `${GOOGLE_ANALYTICS_ID}`,
+            `${GOOGLE_ANALYTICS_ID}`,
            ],
         pluginConfig: {
           head: true,
@@ -158,21 +167,21 @@ module.exports = {
     `gatsby-plugin-netlify`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-    // {
-    //   resolve: "gatsby-transformer-remark",
-    //   options: {
-    //     plugins: [
-    //       {
-    //         resolve: "gatsby-remark-embed-youtube",
-    //         options: {
-    //           width: 800,
-    //           height: 400
-    //         }
-    //       }
-    //     ]
-    //   }
-    // },
+    `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-embed-youtube",
+            options: {
+              width: 800,
+              height: 400
+            }
+          }
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {

@@ -1,8 +1,8 @@
 ---
 title: AWS_WSL
 date: "2021-10-11"
-pagetype: ['aws','aykatti']
-hero: aws_console.jpg
+tags: ["aws","aykatti"]
+hero: ./ubuntu-2.svg
 description: "AWS_WSL"
 ---
 

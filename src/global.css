@@ -98,7 +98,7 @@
 /* Pre ```ではさんだもの */
 .markdown pre {
 @apply rounded-b-lg;
-/* @apply py-4 px-4 mt-1 text-white rounded-md; */
+@apply py-4 px-4 mt-1 rounded-md;
 }
 
 
@@ -142,4 +142,35 @@
     border-bottom-right-radius: 0.3em;
     padding: 3px;
     top: 0.5px;
+  }
+
+
+  /*------------------ tableOfContents-------------------------*/
+.tableOfContents {
+  touch-action: none;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 28px;
+  right: 3px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.tableOfContentstitle {
+  display: block;
+  width: 14px;
+  height: 14px;
+  fill: gray;
+}
+
+/* code-title */
+  .tableOfContentsheading {
+    display: block;
+    position: relative;
+    background: #272822;
+    width: 100%;
+    top: 10px;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
   }

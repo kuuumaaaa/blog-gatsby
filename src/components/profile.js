@@ -1,17 +1,26 @@
 import React from "react"
 import { Link } from "gatsby"
-// import Image from "./image"
+// import Image from "../images"
+import { StaticImage } from "gatsby-plugin-image"
+
 
 const profile = () => {
 
   return (
-    <section class="c-profile p-section">
-      <h2 class="c-heading--lg">管理人について</h2>
-      {/* <div class="c-profile__img u-mblg">
-        <Image filename="my-profile.jpg" />
-      </div> */}
+    <section class="profile-h2">
+      <StaticImage
+        className="bio-avatar"
+        layout="fixed"
+        formats={["auto", "webp", "avif"]}
+        src="../images/profile-pic.png"
+        width={100}
+        height={100}
+        quality={100}
+        alt="Profile picture"
+      />
+      <h2 class="text-2xl py-6 font-semibold">管理人について</h2>
       <div class="c-profile__content">
-        <div class="u-mblg c-editArea">
+        <div class="text-sm">
           <p > 駆け出しSEのkumaです。</p>
           <ul>
             <li>大学・大学院では工学を専攻</li>
@@ -20,7 +29,7 @@ const profile = () => {
           </ul>
           <p>備忘録もかねて、ゆったりとブログ作っていきます。</p>
         </div>
-        <p class="u-text-center"><Link to="/about" class="p-btn--detail">About Me</Link></p>
+        <p class="text-center text-xl py-6 font-semibold"><Link to="/about" class="p-btn--detail">About Me</Link></p>
       </div>
     </section >
   )

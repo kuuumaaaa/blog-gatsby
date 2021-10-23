@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-// import Image from "../components/image"
 import Profile from "../components/profile"
 
 const BlogPostTemplate = ({ data, location }) => {
@@ -25,7 +24,7 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
+      <header>
           {/* title */}
           <h1 itemProp="headline" class="text-4xl py-6 font-semibold text-gray-800">{post.frontmatter.title}</h1>
           {/* upload date */}
@@ -34,23 +33,36 @@ const BlogPostTemplate = ({ data, location }) => {
           <section>
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.pagetype || post.excerpt,
+                      __html: post.frontmatter.tags || post.excerpt,
                     }}
-                    itemProp="pagetype"
+                    itemProp="tags"
                   />
           </section>
-
         </header>
-        {/* ここからブログ本文 */}
-        <section class="markdown"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
-        {/* ここまで */}
+          <img className="object-contain h-48 w-full"
+          src={post.frontmatter.hero.publicURL} 
+          alt="SVGicon"/>
+        <div class=" flex flex-wrap">
+          <div class="p-2 md:w-4/5 flex flex-col">
+              {/* 目次 */}
+              <div className="bg-gray-100 m-10 mb-20 p-8 rounded-md border-4 border-gray-500 ">
+                <div className = "text-2xl font-semibold pb-8">目次</div>
+                <div className="leading-6" dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
+              </div>
+              {/* ここからブログ本文 */}
+              <section class="markdown"
+                dangerouslySetInnerHTML={{ __html: post.html }}
+                itemProp="articleBody"
+              />
+              {/* ここまで */}
+          </div>
+          <div class="flex w-1/5 p-2 mt-12 self-start rounded-sm shadow-2xl bg-orange-600">
+            <Profile />
+          </div>
+        </div>
         <hr />
         <footer>
           <Bio />
-          <Profile />
         </footer>
       </article>
       <nav className="blog-post-nav">
@@ -100,11 +112,19 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      tableOfContents(
+        absolute: false
+        pathToSlugField: "frontmatter.path"
+        maxDepth: 3
+      )
       frontmatter {
         title
         date(formatString: "YYYY.MM.DD")
-        pagetype
+        tags
         description
+        hero {
+          publicURL
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

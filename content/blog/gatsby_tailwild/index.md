@@ -1,10 +1,12 @@
 ---
 title: GatsbyにTailwild CSSを導入
 date: "2021-10-16"
-pagetype: ['gatsby']
-hero: aws_console.jpg
+tags: ["gatsby"]
+hero: ./tailwind-css-wordmark.svg
 description: "Install Tailwild CSS with Gatsby"
 ---
+
+
 ## CSS周りについて
 ※私はフロントエンド周りについて、まったくと言っていいほど知識がないので、もし間違ったことを記載していたら申し訳ないです。
 

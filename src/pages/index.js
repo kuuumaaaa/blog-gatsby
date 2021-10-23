@@ -4,6 +4,8 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Profile from "../components/profile"
+
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -26,7 +28,8 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      <Bio />
+    <div class=" flex flex-wrap">
+    <div class="p-2 mx-16 md:w-4/6 flex flex-col">
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -54,10 +57,11 @@ const BlogIndex = ({ data, location }) => {
                 </section>
                 <section>
                   <p
+                    className="rounded-full py-2 px-4 bg-gray-700"
                     dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.pagetype || post.excerpt,
+                      __html: post.frontmatter.tags || post.excerpt,
                     }}
-                    itemProp="pagetype"
+                    itemProp="tags"
                   />
                 </section>
               </article>
@@ -66,6 +70,12 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      </div>
+      {/* Sidebar固定 */}
+      <div class="flex w-1/5 p-4 mt-8 self-start rounded-sm shadow-2xl bg-orange-600">
+          <Profile />
+      </div>
+      </div>
     </Layout>
   )
 }
@@ -88,7 +98,7 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "YYYY.MM.DD")
           title
-          pagetype
+          tags
           description
         }
       }
