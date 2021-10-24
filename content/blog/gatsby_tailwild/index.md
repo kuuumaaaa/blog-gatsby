@@ -1,9 +1,9 @@
 ---
-title: GatsbyにTailwild CSSを導入
+title: TailWild CSSを導入
 date: "2021-10-16"
-tags: ["gatsby"]
+tags: ["gatsby","TailWild"]
 hero: ./tailwind-css-wordmark.svg
-description: "Install Tailwild CSS with Gatsby"
+description: "Install TailWild CSS with Gatsby"
 ---
 
 
@@ -14,18 +14,18 @@ description: "Install Tailwild CSS with Gatsby"
 を使用している。
 
 ブログを書き始めるに当たって、CSSを追加していくうちに、CSS内でクラスがコンフリクトするなどの記載があり管理方法を考えていた。
-その問題を解決できそうなのが、[Tailwild CSS](https://tailwindcss.jp/)だった。
+その問題を解決できそうなのが、[TailWild CSS](https://tailwindcss.jp/)だった。
 
 <!-- https://www.gatsbyjs.com/starters/ -->
 
-## Tailwild CSS
+## TailWild CSS
 >Tailwind CSSは高度にカスタマイズ可能な低レベルのCSSフレームワークであり、 オーバーライドするために戦わなければならない煩わしい独善的なスタイルなしに、 オーダーメイドのデザインを構築するために必要なすべてのビルディングブロックを提供します。
 
-CSSにクラスを作成しなくても、Tailwild CSSが提供するコンポーネントを組み合わせるだけで、簡単にデザインすることができるようにすることができるフレームワークという認識です。ごちゃごちゃしなくなるからめちゃ便利！！
+CSSにクラスを作成しなくても、TailWild CSSが提供するコンポーネントを組み合わせるだけで、簡単にデザインすることができるようにすることができるフレームワークという認識です。ごちゃごちゃしなくなるからめちゃ便利！！
 早速導入！！！
 
 ## 導入
-GatsbyへTailwildを導入するのになかなか苦戦したので、下記に私の場合、上手く行った導入手順を示します。
+GatsbyへTailWildを導入するのになかなか苦戦したので、下記に私の場合、上手く行った導入手順を示します。
 (導入がすんなりいかなかったのはOSがwindowsであったためである可能性がある)
 
 ### 環境
@@ -82,7 +82,7 @@ gatsbyはpluginを導入する際には、gatsby-config.jsへ記載が必要で�
 ```
 
 ### CSSファイルに記載
-Tailwild CSSを使えるようにCSSファイルを作成しimportする。
+TailWild CSSを使えるようにCSSファイルを作成しimportする。
 ここで詰まった。
 
 公式では以下のように記載するように書かれている。
