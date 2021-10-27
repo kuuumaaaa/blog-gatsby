@@ -2,15 +2,15 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const ContuctPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
     <Layout location={location} title={siteTitle}>
+      <Seo title="Contuct"/>
       <div class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
-        <SEO title="Contuct"/>
         <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white my-2" >Contuct me</h1>        
         <form
           name="contact" 

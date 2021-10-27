@@ -5642,6 +5642,15 @@
     "lodash" "^4.17.21"
     "micromatch" "^4.0.4"
 
+"gatsby-plugin-breadcrumb@^12.2.0":
+  "integrity" "sha512-FGsyfT4IUu7xD1830nkcP3kiqNbwW0gGkxXQ+6Bqg5gSkdZ5T32P7uS0g4TWxtbZNkNbPA1yTsUBnc/XcyWBtQ=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-breadcrumb/-/gatsby-plugin-breadcrumb-12.2.0.tgz"
+  "version" "12.2.0"
+  dependencies:
+    "identity-obj-proxy" "3.0.0"
+    "prop-types" "15.7.2"
+    "wildcard-match" "5.1.2"
+
 "gatsby-plugin-canonical-urls@^3.14.0":
   "integrity" "sha512-xEyNK5dlJtKKce2KUtt5gTjYevC6hKZAPevQhy1Dk2zuvk7N1Fbh6gxT1Vv0p9DJyt/7xbzHz2tYpP+Q9X/Wlg=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-3.14.0.tgz"
@@ -6696,6 +6705,11 @@
   "resolved" "https://registry.npmjs.org/hard-rejection/-/hard-rejection-2.1.0.tgz"
   "version" "2.1.0"
 
+"harmony-reflect@^1.4.6":
+  "integrity" "sha512-HIp/n38R9kQjDEziXyDTuW3vvoxxyxjxFzXLrBr18uB47GnSt+G9D29fqrpM5ZkspMcPICud3XsBJQ4Y2URg8g=="
+  "resolved" "https://registry.npmjs.org/harmony-reflect/-/harmony-reflect-1.6.2.tgz"
+  "version" "1.6.2"
+
 "has-bigints@^1.0.1":
   "integrity" "sha512-LSBS2LjbNBTf6287JEbEzvJgftkF5qFkmCo9hDRpAzKhUOlJ+hx8dd4USs00SgsUNwc4617J9ki5YtEClM2ffA=="
   "resolved" "https://registry.npmjs.org/has-bigints/-/has-bigints-1.0.1.tgz"
@@ -7064,6 +7078,13 @@
   "integrity" "sha512-slx8Q6oywCCSfKgPgL0sEsXtPVnSbTLWpyiDcu6msHOyKOLari1TD1qocXVCft80umnkk3/Qqh3lwoFt8T/BPQ=="
   "resolved" "https://registry.npmjs.org/idb-keyval/-/idb-keyval-3.2.0.tgz"
   "version" "3.2.0"
+
+"identity-obj-proxy@3.0.0":
+  "integrity" "sha1-lNK9qWCERT7zb7xarsN+D3nx/BQ="
+  "resolved" "https://registry.npmjs.org/identity-obj-proxy/-/identity-obj-proxy-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "harmony-reflect" "^1.4.6"
 
 "ieee754@^1.1.13", "ieee754@^1.2.1":
   "integrity" "sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA=="
@@ -10256,7 +10277,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.6.1", "prop-types@^15.7.2":
+"prop-types@^15.6.1", "prop-types@^15.7.2", "prop-types@15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -13102,6 +13123,11 @@
   "version" "3.1.0"
   dependencies:
     "string-width" "^4.0.0"
+
+"wildcard-match@5.1.2":
+  "integrity" "sha512-qNXwI591Z88c8bWxp+yjV60Ch4F8Riawe3iGxbzquhy8Xs9m+0+SLFBGb/0yCTIDElawtaImC37fYZ+dr32KqQ=="
+  "resolved" "https://registry.npmjs.org/wildcard-match/-/wildcard-match-5.1.2.tgz"
+  "version" "5.1.2"
 
 "wildcard@^2.0.0":
   "integrity" "sha512-JcKqAHLPxcdb9KM49dufGXn2x3ssnfjbcaQdLlfZsL9rH9wgDQjUtDxbo8NE0F6SFvydeu1VhZe7hZuHsB2/pw=="

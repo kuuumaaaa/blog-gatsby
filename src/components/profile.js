@@ -8,6 +8,8 @@ const profile = () => {
 
   return (
     <section class="profile-h2">
+      <h2 class="text-2xl py-6 font-semibold">管理人について</h2>
+      <div class="m-5 object-center">
       <StaticImage
         className="bio-avatar"
         layout="fixed"
@@ -18,7 +20,7 @@ const profile = () => {
         quality={100}
         alt="Profile picture"
       />
-      <h2 class="text-2xl py-6 font-semibold">管理人について</h2>
+      </div>
       <div class="c-profile__content">
         <div class="text-sm">
           <p > 駆け出しSEのkumaです。</p>

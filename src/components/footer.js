@@ -6,13 +6,13 @@ const Footer = () => {
   return (
       <footer class= "bg-gray-200">
             <div class = "flex justify-center">
-                <div class = "text-center px-4 py-2 m-2">
+                <div class = "text-center px-4 py-2 m-2 hover:text-gray-900">
                   <Link to="/">Home</Link>
                 </div>
-                <div class = "text-center px-4 py-2 m-2">
+                <div class = "text-center px-4 py-2 m-2 hover:text-gray-900">
                   <Link to="/about">About</Link>
                 </div> 
-                <div class = "text-center px-4 py-2 m-2">
+                <div class = "text-center px-4 py-2 m-2 hover:text-gray-900">
                   <Link to="/policy">Policy</Link>
                 </div>
             </div>

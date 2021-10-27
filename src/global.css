@@ -174,3 +174,8 @@
     border-top-left-radius: 0.3em;
     border-top-right-radius: 0.3em;
   }
+
+
+.post-list-item {
+  @apply p-5 bg-white m-5 shadow
+}

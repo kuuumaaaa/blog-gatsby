@@ -1,5 +1,5 @@
 import * as React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -11,9 +11,11 @@ const Aboutpage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="About" />
-      <h1>About</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      <Link to="/">Back to Home</Link>
+      <h1 className="text-2xl my-6 pl-8 border-b border-gray-600 font-semibold text-gray-800">About</h1>
+      <p>SIerでSEしてます。</p>
+      <p>業務はAWSのアーキテクト考えたりすることが多いです。</p>
+      <p>フロントエンドの勉強や覚え書き・アウトプットする場をつくるためにブログを始めました。</p>
+      <p>これとは別件でkaggleやsignateなどの機械学習のコンペにも時々参加してます。</p>
     </Layout>
   )
 }

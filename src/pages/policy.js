@@ -10,7 +10,7 @@ const policy = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle} >
       <div class="markdown">
-        <Seo title="プライバシーポリシー" />
+        <Seo title="policy" />
         <h1>プライバシーポリシー</h1>
 
         <h2>個人情報の利用目的</h2>

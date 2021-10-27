@@ -267,16 +267,13 @@ a:focus {
   margin: 0;
 }
 
-.post-list-item {
-  /* margin-bottom: var(--spacing-8);
-  margin-top: var(--spacing-8);
-  border:  1px #ff0000 solid; */
+/* .post-list-item {
   padding: 0.2em 0.5em;
   margin: 2em 0;
   background: #d6ebff;
   box-shadow: 0px 0px 0px 10px #d6ebff;
   border: dashed 2px white;
-}
+} */
 
 .post-list-item p {
   margin-bottom: var(--spacing-0);

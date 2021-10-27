@@ -195,5 +195,20 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
+    // {
+    //   resolve: `gatsby-plugin-breadcrumb`,
+    //   options: {
+    //     defaultCrumb: {
+    //       location: {
+    //         state: { crumbClicked: false },
+    //         pathname: "/",
+    //       },
+    //       crumbLabel: "Home",
+    //       crumbSeparator: "",
+    //       crumbStyle: { color: "#666" },
+    //       crumbActiveStyle: { color: "#333" },
+    //     },
+    //  },
+    // },
   ],
 }

@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Profile from "../components/profile"
-
+import Tags from "../components/tags"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -42,6 +42,9 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 <header>
+                <img className="object-contain h-48 w-full"
+                  src={post.frontmatter.hero.publicURL} 
+                  alt="SVGicon"/>
                   <h2>
                       <span itemProp="headline">{title}</span>
                   </h2>
@@ -56,13 +59,7 @@ const BlogIndex = ({ data, location }) => {
                   />
                 </section>
                 <section>
-                  <p
-                    className="rounded-full py-2 px-4 bg-gray-700"
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.tags || post.excerpt,
-                    }}
-                    itemProp="tags"
-                  />
+                  <Tags tags={post.frontmatter.tags} />
                 </section>
               </article>
               </Link>
@@ -72,7 +69,7 @@ const BlogIndex = ({ data, location }) => {
       </ol>
       </div>
       {/* Sidebar固定 */}
-      <div class="flex w-1/5 p-4 mt-8 self-start rounded-sm shadow-2xl bg-orange-600">
+      <div class="flex w-1/5 p-4 mt-8 self-start rounded-sm shadow-2xl bg-white">
           <Profile />
       </div>
       </div>
@@ -100,6 +97,9 @@ export const pageQuery = graphql`
           title
           tags
           description
+          hero{
+            publicURL
+          }
         }
       }
     }
