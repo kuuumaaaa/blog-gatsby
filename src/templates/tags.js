@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 // Components
 import { Link, graphql } from "gatsby"
+import Seo from "../components/seo"
 
 import Layout from '../components/layout'
 
@@ -17,6 +18,9 @@ const Tags = ({ pageContext, data, location }) => {
   const title = `tag: ${tag}`
   return (
     <Layout location={location} title={title}>
+      <Seo
+        title={tag}
+      />
       <div>
 	<h1 class ="text-xl font-semibold text-gray-700 capitalize dark:text-white my-2">{tagHeader}</h1>
 	<ul >

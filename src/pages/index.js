@@ -45,7 +45,7 @@ const BlogIndex = ({ data, location }) => {
                 <img className="object-contain h-48 w-full"
                   src={post.frontmatter.hero.publicURL} 
                   alt="SVGicon"/>
-                  <h2>
+                  <h2 class="text-gray-800 text-3xl py-4">
                       <span itemProp="headline">{title}</span>
                   </h2>
                   <small>{post.frontmatter.date}</small>

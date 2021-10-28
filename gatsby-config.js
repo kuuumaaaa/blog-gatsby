@@ -93,6 +93,7 @@ module.exports = {
       options: {
         trackingIds: [
           `${process.env.GOOGLE_ANALYTICS_ID}`,
+          `${process.env.GOOGLE_ADSENSE_ID}`,
            ],
         pluginConfig: {
           head: true,
