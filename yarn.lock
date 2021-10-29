@@ -5545,6 +5545,13 @@
   "resolved" "https://registry.npmjs.org/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz"
   "version" "1.0.1"
 
+"gatsby-awesome-pagination@^0.3.8":
+  "integrity" "sha512-Bnf2rncqjyhQeye8w+OVK8wmgu/Y77HI8Po05oEqbCSd+fMd0uGDv6ZhKH7UU/xcTv2cbJm7ie+Px9t41ngAxg=="
+  "resolved" "https://registry.npmjs.org/gatsby-awesome-pagination/-/gatsby-awesome-pagination-0.3.8.tgz"
+  "version" "0.3.8"
+  dependencies:
+    "lodash" "^4.17.21"
+
 "gatsby-cli@^3.13.0":
   "integrity" "sha512-QTJZUY4wPwXLuK4aP3GCqBpklruV2hv/jtf65ED5zfeF2YnZlFvrJXt40n9o1ptc5XYe/FF6yFBxu1Lwbt9qtg=="
   "resolved" "https://registry.npmjs.org/gatsby-cli/-/gatsby-cli-3.13.0.tgz"
@@ -6154,7 +6161,7 @@
   dependencies:
     "@babel/core" "^7.14.8"
 
-"gatsby@^2.0.0", "gatsby@^3.0.0", "gatsby@^3.0.0 || ^2.0.0", "gatsby@^3.0.0-next.0", "gatsby@^3.13.1", "gatsby@>2.0.0-alpha":
+"gatsby@^2.0.0", "gatsby@^3.0.0", "gatsby@^3.0.0 || ^2.0.0", "gatsby@^3.0.0-next.0", "gatsby@^3.13.1", "gatsby@>=2.0.0", "gatsby@>2.0.0-alpha":
   "integrity" "sha512-ZSxdP8v/wdQxGzRur373U2GNmpGuMk3J7bqUTTzY/QGI0sb0AeczD954qdTylTeUV88Ud2UKQ+qFYG1BjX1GJA=="
   "resolved" "https://registry.npmjs.org/gatsby/-/gatsby-3.13.1.tgz"
   "version" "3.13.1"
@@ -10557,7 +10564,7 @@
   "resolved" "https://registry.npmjs.org/react-side-effect/-/react-side-effect-2.1.1.tgz"
   "version" "2.1.1"
 
-"react@^16.3.0 || ^17.0.0", "react@^16.9.0 || ^17.0.0", "react@^17.0.1", "react@>=16.3.0", "react@15.x || 16.x || 17.x", "react@17.0.1":
+"react@^16.3.0 || ^17.0.0", "react@^16.9.0 || ^17.0.0", "react@^17.0.1", "react@>=16.0.0", "react@>=16.3.0", "react@15.x || 16.x || 17.x", "react@17.0.1":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
   "version" "17.0.1"
