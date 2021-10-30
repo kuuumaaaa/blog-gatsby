@@ -63,7 +63,7 @@ const BlogPostTemplate = ({ data, location }) => {
               />
               {/* ここまで */}
           </div>
-          <div class="flex w-1/5 p-2 mt-12 self-start rounded-sm shadow-2xl bg-white">
+          <div class="flex w-1/5 p-2 mt-12 self-start rounded-xl shadow-md bg-white">
             <Profile />
           </div>
         </div>

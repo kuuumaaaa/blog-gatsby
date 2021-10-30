@@ -7,7 +7,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const profile = () => {
 
   return (
-    <section class="profile-h2">
+    <section >
       <h2 class="text-2xl py-6 font-semibold">管理人について</h2>
       <div class="m-5 object-center">
       <StaticImage

@@ -32,12 +32,12 @@ const BlogIndex = ({ data, location,pageContext }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
     <div class=" flex flex-wrap">
-    <div class="p-2 mx-16 md:w-4/6 flex flex-col">
+    <div class="p-2 mx-16 md:w-4/6 flex flex-col ">
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
           return (
-            <li key={post.fields.slug}>
+            <li class = "rounded-xl shadow-md p-5 bg-white m-5 shadow" key={post.fields.slug}>
               <Link className="post-link" to={post.fields.slug} itemProp="url">
               <article
                 className="post-list-item"
@@ -86,7 +86,7 @@ const BlogIndex = ({ data, location,pageContext }) => {
       <Pagenation pageContext={pageContext} />
       </div>
       {/* Sidebar固定 */}
-      <div class="flex w-1/5 p-4 mt-8 self-start rounded-sm shadow-2xl bg-white">
+      <div class="flex w-1/5 p-4 mt-8 self-start rounded-xl shadow-md bg-white">
           <Profile />
       </div>
       </div>
