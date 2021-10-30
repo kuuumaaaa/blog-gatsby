@@ -170,10 +170,16 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.example.com',
-        sitemap: 'https://www.example.com/sitemap.xml',
+        host: 'https://www.kumachaaan.com',
+        sitemap: 'https://www.kumachaaan.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.kumachaaan.com`,
+      },
     },
     `gatsby-plugin-netlify`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
