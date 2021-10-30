@@ -5,7 +5,11 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Profile from "../components/profile"
+import Tags from "../components/tags"
 import Share from "../components/share"
+
+import Clocksvg from "../images/clock.svg"
+
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -29,15 +33,17 @@ const BlogPostTemplate = ({ data, location }) => {
           {/* title */}
           <h1 itemProp="headline" class="text-4xl py-6 font-semibold text-gray-800">{post.frontmatter.title}</h1>
           {/* upload date */}
-          <p>{post.frontmatter.date}</p>
+          <div className="flex justify-start">
+                      <img 
+                      src={Clocksvg}
+                      width="15" 
+                      height="15"
+                      alt="SVGicon"/>
+                      {post.frontmatter.date}
+          </div>
           {/*tag*/}
           <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.tags || post.excerpt,
-                    }}
-                    itemProp="tags"
-                  />
+            <Tags tags={post.frontmatter.tags} />
           </section>
         </header>
           <img className="object-contain h-48 w-full"

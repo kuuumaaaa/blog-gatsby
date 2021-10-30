@@ -8,6 +8,8 @@ import Profile from "../components/profile"
 import Tags from "../components/tags"
 import Pagenation from "../components/pagination"
 
+import Clocksvg from "../images/clock.svg"
+
 const BlogIndex = ({ data, location,pageContext }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -49,7 +51,16 @@ const BlogIndex = ({ data, location,pageContext }) => {
                   <h2 class="text-gray-800 text-3xl py-4">
                       <span itemProp="headline">{title}</span>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
+                  <small> 
+                      <div className="flex justify-start">
+                      <img 
+                      src={Clocksvg}
+                      width="15" 
+                      height="15"
+                      alt="SVGicon"/>
+                      {post.frontmatter.date}
+                      </div>
+                  </small>
                 </header>
                 <section>
                   <p
