@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Profile from "../components/profile"
+import Share from "../components/share"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -65,6 +66,11 @@ const BlogPostTemplate = ({ data, location }) => {
           <Bio />
         </footer>
       </article>
+      <Share
+        title={post.frontmatter.title}
+        url={`${data.site.siteMetadata.siteUrl}${location.pathname}`}
+        description={post.excerpt}
+      />
       <nav className="blog-post-nav">
         <ul
           style={{
@@ -106,6 +112,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     markdownRemark(id: { eq: $id }) {
