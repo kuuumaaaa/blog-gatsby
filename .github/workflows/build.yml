@@ -3,7 +3,8 @@ name: Build Gatsby and deploy to Netlify
 on:
   push:
     branches:
-      - *
+      - master
+      - 'kuuumaaaa/*'
 
 jobs:
   build:
@@ -13,6 +14,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12.x'
+      - run: pwd
+      - run: ls -l
+      - run: cd ./app
       - run: npm ci
       - run: npm run build
         env:
