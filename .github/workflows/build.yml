@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - 'kuuumaaaa/*'
 
 jobs:
   build:
@@ -13,8 +14,11 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12.x'
-      - run: npm ci
-      - run: npm run build
+      - name: npm ci, build
+        run: |
+          cd ./app
+          npm ci
+          npm run build
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           GOOGLE_ADSENSE_ID: ${{ secrets.GOOGLE_ADSENSE_ID }}
@@ -23,5 +27,5 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
-          args: deploy --dir=public --prod
+          args: deploy --dir=app/public --prod
           secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
