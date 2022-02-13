@@ -14,10 +14,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '12.x'
-      - run: pwd
-      - run: ls -l
-      - run: cd ./app
-      - run: npm ci
+      - run: |
+          cd ./app
+          npm ci
       - run: npm run build
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
