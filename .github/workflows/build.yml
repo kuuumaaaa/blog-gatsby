@@ -3,7 +3,8 @@ name: Build Gatsby and deploy to Netlify
 on:
   push:
     branches:
-      - '*'
+      - master
+      - 'kuuumaaaa/*'
 
 jobs:
   build:
@@ -14,7 +15,7 @@ jobs:
         with:
           node-version: '12.x'
       - run: npm ci
-      - run: npm run build
+      - run: npm run build　
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           GOOGLE_ADSENSE_ID: ${{ secrets.GOOGLE_ADSENSE_ID }}
