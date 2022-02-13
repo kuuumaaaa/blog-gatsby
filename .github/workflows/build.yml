@@ -18,7 +18,7 @@ jobs:
       - run: ls -l
       - run: cd ./app
       - run: npm ci
-      - run: npm run build　
+      - run: npm run build
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           GOOGLE_ADSENSE_ID: ${{ secrets.GOOGLE_ADSENSE_ID }}
