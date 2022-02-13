@@ -25,12 +25,10 @@ const profile = () => {
         <div class="text-sm">
           <p > 駆け出しSEのkumaです。</p>
           <ul>
-            <li>大学・大学院では工学を専攻</li>
-            <li>2021年からIT企業でSEとして業務</li>
-            <li>現在、AWSなどのシステムアーキテクチャやシステム構築に従事</li>
-            <li>TOEIC700s点以上を目指し日々彼女と一緒に奮闘しています(^^♪</li>
+            <li>大学・大学院では工学を専攻してました</li>
+            <li>2021年からIT企業でSEとして業務してます</li>
+            <li>AWSを使ったシステム構築などしてます</li>
           </ul>　
-          <p>備忘録もかねて、ゆったりとブログ作っていきます^^</p>
         </div>
         <p class="text-center text-xl py-6 font-semibold"><Link to="/about" class="p-btn--detail">About Me</Link></p>
       </div>
